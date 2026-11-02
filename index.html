@@ -1,15 +1,19 @@
 <!doctype html>
 <html lang="vi">
-<!-- Sinh từ 05_PUBLISHING/07_store_package/templates/website/index.html.tpl. Sửa PUBLISHING/_source/ rồi chạy render_package.py.
+<!-- Sinh từ 05_PUBLISHING/07_store_package/templates/website_l10n/index.html.tpl — một bộ trang cho MỖI ngôn ngữ
+     (_source/website_locales.json). Sửa PUBLISHING/_source/ rồi chạy render_package.py.
      Không JavaScript, không tài nguyên tải từ domain ngoài, không công cụ theo dõi. -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Sổ Tay Tiền</title>
-<meta name="description" content="Sổ ghi thu chi và sổ nợ vay — hiểu rằng cho mượn không phải là tiêu tiền.">
+<title>Sổ Tay Tiền - Cho mượn và đi vay rõ ràng</title>
+<meta name="description" content="Ai đang nợ bạn? Bạn đang nợ ai? Ghi từng khoản trong 5 giây, quên ngày nào nhập bù ngày đó. Không tài khoản, không quảng cáo, dữ liệu nằm trên máy bạn.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="assets/icon.png">
+<link rel="alternate" hreflang="vi" href="index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
 </head>
 <body>
 <header class="site">
@@ -24,15 +28,15 @@
   <section class="hero">
     <img class="app-icon" src="assets/icon.png" alt="Biểu tượng Sổ Tay Tiền" width="128" height="128">
     <h1>Sổ Tay Tiền: Thu Chi &amp; Nợ</h1>
-    <p class="lead">Quản lý thu chi và sổ nợ vay</p>
-    <p>Ai đang nợ bạn? Bạn đang nợ ai? Sổ Tay Tiền ghi lại từng khoản trong 5 giây. Không tài khoản, không quảng cáo, dữ liệu nằm trên máy bạn.</p>
+    <p class="lead">Cho mượn và đi vay rõ ràng</p>
+    <p>Ai đang nợ bạn? Bạn đang nợ ai? Ghi từng khoản trong 5 giây, quên ngày nào nhập bù ngày đó. Không tài khoản, không quảng cáo, dữ liệu nằm trên máy bạn.</p>
     <p><a class="store-note" href="https://apps.apple.com/us/app/s%E1%BB%95-tay-ti%E1%BB%81n-thu-chi-n%E1%BB%A3/id6812595332" target="_blank" rel="noopener">Tải trên App Store</a></p>
   </section>
 
   <section class="shots" aria-label="Ảnh màn hình">
-    <img src="assets/shot-01.jpg" alt="Ảnh màn hình ứng dụng 1" width="645" height="1402" loading="lazy">
-    <img src="assets/shot-02.jpg" alt="Ảnh màn hình ứng dụng 2" width="645" height="1402" loading="lazy">
-    <img src="assets/shot-03.jpg" alt="Ảnh màn hình ứng dụng 3" width="645" height="1402" loading="lazy">
+    <img src="assets/vi/shot-01.jpg" alt="Ảnh màn hình ứng dụng 1" width="645" height="1402" loading="lazy">
+    <img src="assets/vi/shot-02.jpg" alt="Ảnh màn hình ứng dụng 2" width="645" height="1402" loading="lazy">
+    <img src="assets/vi/shot-03.jpg" alt="Ảnh màn hình ứng dụng 3" width="645" height="1402" loading="lazy">
   </section>
 
   <section class="features" aria-label="Tính năng">
@@ -96,11 +100,32 @@
       <h2>Sáng, tối và hình nền riêng</h2>
       <p>Giao diện theo chế độ sáng hoặc tối của iPhone, hoặc chọn riêng trong Thiết lập. Đặt hình nền của bạn; số tiền vẫn luôn đọc rõ.</p>
     </div>
+    <div class="card">
+      <h2>Quên ghi? Nhập bù đúng ngày</h2>
+      <p>Mở báo cáo Ngày, lùi về ngày đã quên, chạm Tiền vào hoặc Tiền ra. Khoản đó vào đúng ngày đang xem.</p>
+    </div>
+    <div class="card">
+      <h2>Nhắc ghi sổ buổi tối</h2>
+      <p>Tự bật, tự chọn giờ. Hôm nào đã ghi thì app không nhắc.</p>
+    </div>
+    <div class="card">
+      <h2>Soạn sẵn tin nhắc nợ</h2>
+      <p>Một lời nhắn lịch sự, đúng số còn lại. Bạn đọc lại rồi tự chọn gửi qua đâu; app không gửi gì thay bạn.</p>
+    </div>
+    <div class="card">
+      <h2>So với cùng kỳ</h2>
+      <p>Dưới thẻ Đã chi ở Tuần, Tháng, Năm: nửa đầu tháng này so với nửa đầu tháng trước, không so nửa tháng với cả tháng.</p>
+    </div>
+    <div class="card">
+      <h2>Tiếng Việt và tiếng Anh</h2>
+      <p>Đổi ngay trong Thiết lập, không cần mở lại app. Mọi số tiền vẫn tính bằng đồng.</p>
+    </div>
   </section>
 </main>
 <footer>
-  <p>Cập nhật lần cuối: 10/10/2026 · © 2026 Dương Long Hồ ·
+  <p>Cập nhật lần cuối: 02/11/2026 · © 2026 Dương Long Hồ ·
     <a href="support.html">Hỗ trợ</a> · <a href="privacy.html">Quyền riêng tư</a> · <a href="terms.html">Điều khoản</a></p>
+  <p><strong>Tiếng Việt</strong> · <a href="en/index.html" hreflang="en" lang="en">English</a></p>
 </footer>
 </body>
 </html>
